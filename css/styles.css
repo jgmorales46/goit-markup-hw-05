@@ -41,6 +41,8 @@ section {
 }
 
 .button-primary {
+  
+  cursor: pointer;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   font-size: 16px;
@@ -181,11 +183,11 @@ header .container .contacts-menu li .item:hover .icon {
   font-size: 44px;
   text-transform: capitalize;
   position: relative;
-  z-index: 5;
+  z-index: 2;
 }
 .hero button {
   position: relative;
-  z-index: 5;
+  z-index: 2;
 }
 .hero .overlay {
   position: absolute;
@@ -536,5 +538,47 @@ color: #FFFFFF;
 
 /*************ventana modal***************************/
 
+.backdrop {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  width: 350px;
+  height: 390px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+ position: absolute;
+  top: 221px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
+
+.modal-close {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
 
