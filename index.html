@@ -64,8 +64,7 @@
                 <use
                   class="logo"
                   href="./images/icons/symbol-defs.svg#icon-logo-telefono"
-                ></use></svg
-              >+1 212-772-4150</a
+                ></use></svg>+1 212-772-4150</a
             >
           </li>
         </ul>
@@ -81,65 +80,100 @@
             <button type="button" class="button" data-modal-open>
               Request our service
             </button>
+
             <div class="backdrop is-hidden" data-modal>
               <div class="modal">
-                <button class="cierre__modal" data-modal-close>X</button>
+                <button class="modal__close" data-modal-close>X</button>
 
-                <h3 class="title__form">
-                  Deje sus datos, nos contactaremos con usted
-                </h3>
+                <form name="customer-data" autocomplete="on">
+                  <div class="form" role="group" aria-labelledby="subscribe">
+                    <p class="form-title" id="subscribe">
+                      Deje sus datos, nos contactaremos con usted
+                    </p>
 
-                <form>
-                  <label>
-                    Name
+                    <label class="form__label" for="username">Nombre</label>
                     <input
+                      class="form__input"
+                      name="username"
                       type="text"
-                      name="nombre"
-                      placeholder="Introduce tu nombre"
+                      id="username"
+                      required
                     />
-                  </label>
-
-                  <label>
-                    Phone
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder="introduce tu numero de celular"
-                    />
-                  </label>
-
-                  <label>
-                    Email
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="introduce tu correo electronico"
-                    />
-                  </label>
-
-                  <label>
-                    Comentarios
-                    <textarea
-                      name="comentarios"
-                      rows="5"
-                      placeholder="Enter your message here..."
-                    ></textarea>
-                  </label>
-                  <div class="form-field">
-                    <input
-                      type="checkbox"
-                      class="form-input"
-                      name="hobby"
-                      value="sports"
-                      id="sports"
-                    />
-
-                    <label class="form-label" for="terminos__condiciones"
-                      >Estoy de acuerdo con el boletín informativo y acepto los
-                      Términos y Condiciones</label
+                    <svg
+                      class="form__person-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12px"
+                      height="12px"
                     >
+                      <use
+                        href="./images/icons/symbol-defs-modal.svg#icon-name"
+                      ></use>
+                    </svg>
+
+                    <label class="form__label" for="phone">Teléfono</label>
+                    <input
+                      class="form__input"
+                      name="phone"
+                      type="tel"
+                      id="phone"
+                      required
+                    />
+                    <svg
+                      class="form__tel-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13px"
+                      height="13px"
+                    >
+                      <use
+                        href="./images/icons/symbol-defs-modal.svg#icon-tel"
+                      ></use>
+                    </svg>
+
+                    <label class="form__label" for="e-mail">E-mail</label>
+                    <input
+                      class="form__input"
+                      name="email"
+                      type="email"
+                      id="e-mail"
+                      required
+                    />
+                    <svg
+                      class="form__envelope-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15px"
+                      height="12px"
+                    >
+                      <use
+                        href="./images/icons/symbol-defs-modal.svg#icon-email"
+                      ></use>
+                    </svg>
+
+                    <label class="form__label" for="comments"
+                      >Comentarios</label
+                    >
+                    <textarea
+                      class="form__textarea"
+                      name="comments"
+                      id="comments"
+                      rows="10"
+                      placeholder="Introduzca el texto"
+                    ></textarea>
+
+                    <div class="form__tyc">
+                      <input
+                        class="form__checkbox"
+                        name="terms-conditions"
+                        type="checkbox"
+                        value="tyc"
+                        id="tyc"
+                      />
+                      <label class="form__terms-conditions" for="tyc"
+                        >Estoy de acuerdo con el boletín informativo y acepto
+                        los Términos y Condiciones</label
+                      >
+                    </div>
+                    <button class="form__button" type="submit">Enviar</button>
                   </div>
-                  <button class="type__button" type="submit">Submit</button>
                 </form>
               </div>
             </div>
