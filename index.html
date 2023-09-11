@@ -78,7 +78,14 @@
           <h1 class="title">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
 
           <div class="buttons flex__center">
-            <button type="button" class="button">Request our service</button>
+            <button type="button" class="button" data-modal-open>
+              Request our service
+            </button>
+            <div class="backdrop is-hidden" data-modal>
+              <div class="modal">
+                <button data-modal-close>X</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -537,5 +544,7 @@
         </div>
       </address>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

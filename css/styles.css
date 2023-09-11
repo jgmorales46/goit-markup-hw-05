@@ -655,9 +655,40 @@ footer {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  /* or 156% */
-
   letter-spacing: 0.03em;
-
   color: var(--main--textColor);
+}
+
+hr {
+  width: 1600px;
+  height: 1px;
+  background-color: #ececec;
+  margin: 0%;
+}
+
+/****************modal************************************/
+.backdrop {
+  position: fixed;
+  /* top: 0%; */
+  width: 100px;
+  height: 100px;
+  background-color: #212121;
+}
+.modal {
+  width: 500px;
+  height: 500px;
+  background-color: aliceblue;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  justify-content: flex-end;
+  display: flex;
+  align-items: flex-start;
+  padding: 14px;
+}
+
+.is-hidden {
+  display: none;
 }
